@@ -17,62 +17,68 @@ def index():
 def process_data():
     data = json.loads(request.data)
     input_value = data['input']
-    #------------------------------------------------------------
-
-        # Connects to your computer's default camera
+    #------------------------------------------------------------    
+        
+    count = 2
+    
     cap = cv2.VideoCapture(0)
-    
-    
-    # Detect the coordinates
+    address = "https://192.168.43.1:8080/video"
+    cap.open(address)
+
     detector = dlib.get_frontal_face_detector()
-    
-    
-    # Capture frames continuously
-    lst = []
+
+    queue = [0,0,0,0,0,0,0,0,0,0]
     j = 0
-    while j < 500:
+    while j < 50:
     
-        # Capture frame-by-frame
         ret, frame = cap.read()
         frame = cv2.flip(frame, 1)
-    
-        # RGB to grayscale
+        
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         faces = detector(gray)
-    
-        # Iterator to count faces
+
         n = 0
-        for face in faces:
+        
+        for _ in faces:
+            n = n+1  
     
-            # Get the coordinates of faces
-            x, y = face.left(), face.top()
-            x1, y1 = face.right(), face.bottom()
-            cv2.rectangle(frame, (x, y), (x1, y1), (0, 255, 0), 2)
-    
-            # Increment iterator for each face in faces
-            n = n+1
-    
-            # Display the box and faces
-            cv2.putText(frame, 'face num'+str(n), (x-10, y-10),
-                        cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
         print(f"Number of faces: {n}")
-        lst.append(n)
-        # Display the resulting frame
+        i = 0
+        while i < 9:
+            queue[i] = queue[i+1]
+            i = i+1
+        queue.append(n)
+        dict = {}
+        for fn in queue:
+            if fn in dict:
+                dict[fn]+=1
+            else:
+                dict[fn] = 0
+        max = 0
+        key = 0
+        for k in dict.keys():
+            if dict[k] > max:
+                max = dict[k]
+                key = k
+
+        if max >= 9 and key != 0:
+            count -= 1
+            print(count)
+            queue = [0,0,0,0,0,0,0,0,0,0]
+        
         cv2.imshow('frame', frame)
     
-        # This command let's us quit with the "q" button on a keyboard.
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
-        j = j+1
+            
+        j += 1
         
-    output_value = max(lst)
+    output_value = "DONE"
     
-    
-    # Release the capture and destroy the windows
     cap.release()
     cv2.destroyAllWindows()
     #------------------------------------------------------------
     return jsonify({'output': output_value})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host = '192.168.43.170',port='5000',debug=True)
