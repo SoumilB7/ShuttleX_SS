@@ -13,15 +13,21 @@ def index():
     # return "<h1>Hello, World</h1>"
 counter = [0]
 @app.route('/process_data', methods=['POST'])
+
+
 def process_data():
     data = json.loads(request.data)
     input_value = data['input']
     #------------------------------------------------------------
     
+    if(input_value=='cam$$'):
+        #do cam 
+        l=0
+    else:
+        counter[0]+=1
     # input_value format : 
     # member counter
-    counter[0]+=1
-    work = 'done'        
+    work = 'done : '        
     
     
     output_value = work + str(counter[0])
