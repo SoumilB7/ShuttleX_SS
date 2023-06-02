@@ -3,6 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <title>ShuttlX</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js">
 
@@ -18,14 +19,29 @@
     <a href="#">Home</a>
     <a href="#">Payments</a>
     <a href="#">About</a>
+    
 </div>
 
 
-<div class="container" onclick="openNav()">
-    <div class="bar1"></div>
-    <div class="bar2"></div>
-    <div class="bar3"></div>
+
+<div class="container" >
+    <div class="bar1" onclick="openNav()"></div>
+    <div class="bar2" onclick="openNav()"></div>
+    <div class="bar3" onclick="openNav()"></div>
+
+    <div class = "icons">
+        <i class="material-icons";id = "icon1">account_circle</i> 
+    </div>
+
+    <div class="accountName">
+        <p>Aman</p>
+    </div>
+    <div class="regNo">
+        <p>22BDEXXXX</p>
+    </div>
 </div>
+
+
 <script>
     function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
@@ -44,12 +60,7 @@
 </script>
 
 
-<label for="input-field">Input:</label>
-<input type="text" id="input-field">
-    <button id="submit-btn">Submit</button>
-    <br><br>
-        <label for="output-field">Output:</label>
-        <input type="text" id="output-field" disabled>
+<i class="fa-solid fa-user fa-bounce"></i>
 
 <div class="div1">
     <button id="btn1" onclick="testfunc()">Testing test1</button>
@@ -71,6 +82,14 @@
 <div class="div5">
     <button id="btn5" onclick="testfunc()">Testing test1</button>
 </div>
+
+
+<label for="input-field">Input:</label>
+<input type="text" id="input-field">
+    <button id="submit-btn">Submit</button>
+    <br><br>
+        <label for="output-field">Output:</label>
+        <input type="text" id="output-field" disabled>
 
 
 </body>
