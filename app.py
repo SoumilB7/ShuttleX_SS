@@ -1,7 +1,7 @@
 import json
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
-
+import pandas as pd
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -13,23 +13,17 @@ def index():
     # return "<h1>Hello, World</h1>"
 counter = [0]
 @app.route('/process_data', methods=['POST'])
-
-
 def process_data():
+    print("Hello")
     data = json.loads(request.data)
     input_value = data['input']
+    # request is the request
     #------------------------------------------------------------
-    
-    if(input_value=='cam$$'):
-        #do cam 
-        l=0
-    else:
-        counter[0]+=1
-    # input_value format : 
+    counter[0]+=1
+    # input_value format :
     # member counter
-    work = 'done : '        
-    
-    
+
+    work = 'done : '
     output_value = work + str(counter[0])
     #------------------------------------------------------------
     return jsonify({'output': output_value})

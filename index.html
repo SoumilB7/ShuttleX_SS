@@ -1,18 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Kiddu GPT</title>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="static/js/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>ShuttlX</title>
+
+    <script src ="index.js">
+
+    </script>
 </head>
-<body>
-  <h1>Kiddu GPT</h1>
-  <label for="input-field">Input:</label>
-  <input type="text" id="input-field">
-  <button id="submit-btn">Submit</button>
-  <button id="camera-btn">camera</button>
-  <br><br>
-  <label for="output-field">Output:</label>
-  <input type="text" id="output-field" disabled>
+<body onload="loadFunc()">
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">Home</a>
+    <a href="#">Payments</a>
+    <a href="#">About</a>
+
+</div>
+
+
+
+<div class="container" >
+    <div class="bar1" onclick="openNav()"></div>
+    <div class="bar2" onclick="openNav()"></div>
+    <div class="bar3" onclick="openNav()"></div>
+
+    <div class = "icons">
+        <i class="material-icons";id = "icon1">account_circle</i>
+    </div>
+
+    <div class="accountName">
+        <p id="userMainpage" >Username</p>
+    </div>
+    <div class="regNo">
+        <p>22BDEXXXX</p>
+    </div>
+</div>
+
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+    }
+</script>
+<script>
+    function myFunction(x) {
+        x.classList.toggle("change");
+    }
+</script>
+
+
+<i class="fa-solid fa-user fa-bounce"></i>
+
+<div class="div1">
+    <button id="btn1" onclick="testfunc()">Testing test1</button>
+</div>
+
+
+<div class="div2">
+    <button id="btn2" onclick="testfunc()">Testing test1</button>
+</div>
+
+<div class="div3">
+    <button id="btn3" onclick="testfunc()">Testing test1</button>
+</div>
+
+<div class="div4">
+    <button id="btn4" onclick="testfunc()">Testing test1</button>
+</div>
+
+<div class="div5">
+    <button id="btn5" onclick="testfunc()">Testing test1</button>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="index.js"></script>
+
+<label for="input-field">Input:</label>
+<input type="text" id="input-field">
+<button id="submit-btn">Submit</button>
+<button id="camera-btn">camera</button>
+<br><br>
+<label for="output-field">Output:</label>
+<input type="text" id="output-field" disabled>
+
+
+
 </body>
 </html>
