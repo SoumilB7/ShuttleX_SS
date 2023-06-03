@@ -67,7 +67,7 @@ body
     min-width: 300px;
 }
 
-#submit-btn
+#submit-btn1
 {
     min-width: 60px;
     background-color: #D8DEE9;
@@ -83,6 +83,29 @@ body
     text-align: center;
 }
 
+#submit-btn3
+{
+    min-width: 60px;
+    background-color: #D8DEE9;
+    border-radius: 6px;
+    text-align: center;
+}
+
+#submit-btn4
+ {
+     min-width: 60px;
+     background-color: #D8DEE9;
+     border-radius: 6px;
+     text-align: center;
+ }
+
+#submit-btn5
+{
+    min-width: 60px;
+    background-color: #D8DEE9;
+    border-radius: 6px;
+    text-align: center;
+}
 #output-field
 {
     border-radius: 6px;

@@ -1,15 +1,62 @@
-$(document).ready(function() {
-    $('#submit-btn1').click(function() {
+window.onload = () =>
+{
+    console.clear()
+    console.log('page loaded!');
+    setInterval
+    (() =>
+        {
+
+            $(document).ready(function() {
+                var input = "reload"
+                $.ajax(
+                    {
+                        type: 'POST',
+                        url: 'http://192.168.43.170:5000/process_data',
+                        contentType: 'application/json',
+                        data: JSON.stringify({input: input}),
+                        success: function (data) {
+                            var namer = data.output.split(',')
+                            $('#output-field').val(namer[0]);
+                            $('#output-field2').val(namer[1]);
+                            $('#output-field3').val(namer[2]);
+                            $('#output-field4').val(namer[3]);
+                            $('#output-field5').val(namer[4]);
+                            },
+                        error: function (xhr, status, error) {
+                            console.error(status + ': ' + error);
+                            }
+                    });
+            });
+
+
+        }, 500
+    )
+}
+
+
+
+
+
+
+
+$(document).ready(function()
+{
+    $('#submit-btn1').click(function()
+    {
         var input = "counter1"
-        $.ajax({
+        $.ajax(
+            {
             type: 'POST',
             url: 'http://192.168.43.170:5000/process_data',
             contentType: 'application/json',
             data: JSON.stringify({input: input}),
-            success: function(data) {
-                $('#output-field').val(data.output);
+            success: function(data)
+            {
+                var namer = data.output.split(',')
+                $('#output-field').val(namer[0]);
             },
-            error: function(xhr, status, error) {
+            error: function(xhr, status, error)
+            {
                 console.error(status + ': ' + error);
             }
         });
@@ -22,7 +69,8 @@ $(document).ready(function() {
             contentType: 'application/json',
             data: JSON.stringify({input: input}),
             success: function(data) {
-                $('#output-field2').val(data.output);
+                var namer = data.output.split(',')
+                $('#output-field2').val(namer[1]);
             },
             error: function(xhr, status, error) {
                 console.error(status + ': ' + error);
@@ -37,7 +85,8 @@ $(document).ready(function() {
             contentType: 'application/json',
             data: JSON.stringify({input: input}),
             success: function(data) {
-                $('#output-field3').val(data.output);
+                var namer = data.output.split(',')
+                $('#output-field3').val(namer[2]);
             },
             error: function(xhr, status, error) {
                 console.error(status + ': ' + error);
@@ -52,7 +101,8 @@ $(document).ready(function() {
             contentType: 'application/json',
             data: JSON.stringify({input: input}),
             success: function(data) {
-                $('#output-field4').val(data.output);
+                var namer = data.output.split(',')
+                $('#output-field4').val(namer[3]);
             },
             error: function(xhr, status, error) {
                 console.error(status + ': ' + error);
@@ -67,7 +117,8 @@ $(document).ready(function() {
             contentType: 'application/json',
             data: JSON.stringify({input: input}),
             success: function(data) {
-                $('#output-field5').val(data.output);
+                var namer = data.output.split(',')
+                $('#output-field5').val(namer[4]);
             },
             error: function(xhr, status, error) {
                 console.error(status + ': ' + error);
