@@ -10,29 +10,34 @@ body
 #btn1
 {
     position: static;
-    background: #D8DEE9;
+    background: #5e81ac;
+    border-color: #5e81ac;
     border-radius: 10px;
     min-height: 10%;
     padding: 10px;
     margin: 20px;
     min-width: 300px;
+    text-align: center;
 }
 
 
 #btn2
 {
     position: static;
-    background: #D8DEE9;
+    background: #8fbcbb;
+    border-color: #8fbcbb;
     border-radius: 10px;
     min-height: 10%;
     padding: 10px;
     margin: 20px;
     min-width: 300px;
+    text-align: center;
 }
 #btn3
 {
     position: static;
-    background: #D8DEE9;
+    background: #5e81ac;
+    border-color: #5e81ac;
     border-radius: 10px;
     min-height: 10%;
     padding: 10px;
@@ -42,7 +47,8 @@ body
 #btn4
 {
     position: static;
-    background: #D8DEE9;
+    background: #5e81ac;
+    border-color: #5e81ac;
     border-radius: 10px;
     min-height: 10%;
     padding: 10px;
@@ -52,13 +58,80 @@ body
 #btn5
 {
     position: static;
-    background: #D8DEE9;
+    background: #8fbcbb;
+    border-color: #8fbcbb;
     border-radius: 10px;
     min-height: 10%;
     padding: 10px;
     margin: 20px;
     min-width: 300px;
 }
+
+#submit-btn
+{
+    min-width: 60px;
+    background-color: #D8DEE9;
+    border-radius: 6px;
+    text-align: center;
+}
+
+#submit-btn2
+{
+    min-width: 60px;
+    background-color: #D8DEE9;
+    border-radius: 6px;
+    text-align: center;
+}
+
+#output-field
+{
+    border-radius: 6px;
+    background-color: #eceff4;
+    max-width: 150px;
+    text-align: center;
+}
+
+#output-field2
+{
+    border-radius: 6px;
+    background-color: #eceff4;
+    max-width: 150px;
+    text-align: center;
+}
+
+#output-field3
+{
+    border-radius: 6px;
+    background-color: #eceff4;
+    max-width: 150px;
+    text-align: center;
+}
+#output-field4
+{
+    border-radius: 6px;
+    background-color: #eceff4;
+    max-width: 150px;
+    text-align: center;
+}
+
+#output-field5
+{
+    border-radius: 6px;
+    background-color: #eceff4;
+    max-width: 150px;
+    text-align: center;
+}
+
+#camera-btn
+{
+    min-width: 60px;
+    background-color: #D8DEE9;
+    border-radius: 6px;
+    text-align: center;
+    position: absolute;
+    left: 7.5%;
+}
+
 
 .container {
     display: inline-block;
@@ -86,7 +159,8 @@ body
     transform: translate(0, -11px) rotate(45deg);
 }
 
-.sidenav {
+.sidenav
+{
     height: 100%;
     width: 0;
     position: fixed;
@@ -100,7 +174,8 @@ body
     border-top-right-radius: 15px;
 }
 
-.sidenav a {
+.sidenav a
+{
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
@@ -109,24 +184,27 @@ body
     transition: 0.3s;
 }
 
-.sidenav a:hover {
+.sidenav a:hover
+{
     color: #f1f1f1;
 }
 
-.sidenav .closebtn {
+.sidenav .closebtn
+{
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-}   
+}
 
-.icons{
+.icons
+{
     color: #D8DEE9;
     background-position-x: 1000px;
     background-position-y: 100px;
     position: relative ;
-    left: 300px; 
+    left: 300px;
     top: -30px;
     scale: 175%;
 }
@@ -134,17 +212,39 @@ body
 .accountName
 {
     color: #D8DEE9;
-    position: relative ;
-    left: 190px; 
-    top: -80px;
+    position: absolute ;
+    left: 200px;
+    top: -0.8%
+  /*  left: 215px;
+    top: -80px; */
 }
 
 .regNo
 {
     color: #D8DEE9;
-    position: relative ;
-    left: 190px; 
-    top: -90px;
-    font-size: 12px;
+    position: absolute ;
+    left: 200px;
+    top: 2%;
+  /*  left: 208px;
+    top: -90px;*/
+    font-size: 14px;
 
+}
+
+.payTitle
+{
+    color: #D8DEE9;
+    font-size: 35px;
+    position: absolute;
+    top: 7px;
+    left: 90px;
+}
+
+.abtTitle
+{
+    color: #D8DEE9;
+    font-size: 35px;
+    position: absolute;
+    top: 7px;
+    left: 140px;
 }

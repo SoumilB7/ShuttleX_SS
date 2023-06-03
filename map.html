@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body
+        {
+            background-image: url("image.png");
+            background-size: cover;
+        }
+        .container {
+            display: inline-block;
+
+            cursor: pointer;
+        }
+
+        .bar1, .bar2, .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: #2e3440;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        .change .bar1
+        {
+            transform: translate(0, 11px) rotate(-45deg);
+        }
+
+        .change .bar2 {opacity: 0;}
+
+        .change .bar3
+        {
+            transform: translate(0, -11px) rotate(45deg);
+        }
+
+        .sidenav
+        {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            border-top-right-radius: 15px;
+        }
+
+        .sidenav a
+        {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover
+        {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn
+        {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .icons
+        {
+            color: #D8DEE9;
+            background-position-x: 1000px;
+            background-position-y: 100px;
+            position: relative ;
+            left: 300px;
+            top: -30px;
+            scale: 175%;
+        }
+
+        .userLoc
+        {
+            scale: 30%;
+        }
+
+        .m-block
+        {
+            position: absolute;
+            left: 2400px;
+            top: 1000px
+        }
+
+        .n-block
+        {
+            position: absolute;
+            left: 2400px;
+            top: 350px
+        }
+
+        .q-block
+        {
+            position: absolute;
+            left: 2350px;
+            top: 610px
+        }
+
+        .f-block
+        {
+            position: absolute;
+            left: 2400px;
+            top: 1000px
+        }
+
+        .p-block
+        {
+            position: absolute;
+            left: 2400px;
+            top: 620px
+        }
+
+        .l-block
+        {
+            position: absolute;
+            left: 1860px;
+            top: 1040px;
+        }
+        .k-block
+        {
+            position: absolute;
+            left: 1360px;
+            top: 1130px;
+
+        }
+        .a-block
+        {
+            position: absolute;
+            left: -200px;
+            top: 1060px;
+        }
+
+        .c-block
+        {
+            position: absolute;
+            left: 40px;
+            top: 1060px
+
+        }
+        .d-block
+        {
+            position: absolute;
+            left: 280px;
+            top: 1110px;
+
+        }
+
+        .g-block
+        {
+            position: absolute;
+            left: 700px;
+            top: 700px;
+
+        }
+
+        .h-block
+        {
+            position: absolute;
+            left:-200px;
+            top:1370px;
+        }
+        .anna_audi
+        {
+            position: absolute;
+            left: -870px;
+            top: 2275px
+        }
+
+        .tt
+        {
+            position: absolute;
+            left: 550px;
+            top: 1710px
+        }
+
+        .c-block-girls
+        {
+            position: absolute;
+            left: 1150px;
+            top: 1650px
+        }
+
+        .balaji-store
+        {
+            position: absolute;
+            left: 830px;
+            top: 1650px
+        }
+
+        .sjt
+        {
+            position: absolute;
+            left: 2230px;
+            top: 1450px
+        }
+        .prp
+        {
+            position: absolute;
+            left: 3000px;
+            top: 1250px
+        }
+
+        .smv
+        {
+            position: absolute;
+            left: -110px;
+            top: 2350px
+        }
+
+        .library
+        {
+            position: absolute;
+            left: -525px;
+            top: 2500px
+        }
+        .main-gate
+        {
+            position: absolute;
+            left: -670px;
+            top: 2750px
+        }
+        .cdmm
+        {
+            position: absolute;
+            left: -1040px;
+            top: 2540px
+
+        }
+
+        .subway
+        {
+            position: absolute;
+            left: 85px;
+            top: 1600px
+
+
+        }
+
+        .shuttle
+        {
+            scale: 25%;
+        }
+
+        .userIcon
+        {
+            scale: 125%;
+        }
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+<body>
+
+
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="payments.html" >Payments</a>
+    <a href="#">About</a>
+
+</div>
+
+
+
+<div class="container" >
+    <div class="bar1" onclick="openNav()"></div>
+    <div class="bar2" onclick="openNav()"></div>
+    <div class="bar3" onclick="openNav()"></div>
+</div>
+
+<div class="userLoc" >
+    <img src="minibus.png" onload="locationFunc(this)" class="shuttle" >
+
+    <img src="steven-gen6.png" onload="userFunc(this)" class="userIcon">
+
+</div>
+
+
+
+<script>
+
+</script>
+<script>
+
+    function openNav()
+    {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav()
+    {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+    }
+
+
+
+
+
+</script>
+
+<script>
+    const locs = [[240,35,"n-block"],[235,61,"q-block"],[240,100,"m-block"],[20,68,"f-block"],[186,104,"l-block"],[136,113,"k-block"],[-20,106,"a-block"],[4,106,"c-block"],[28,111,"28"],[70,70,"g-block"],[-20,137,"h-block"],[-87,227,"anna_audi"],[55,171,"tt"],[115,165,"c-block-girls"],[83,165,"balaji-store"],[223,145,"sjt"],[300,125,"prp"],[-11,235,"smv"],[-52,250,"library"],[-67,275,"main-gate"],[8,160,"subway"]]
+    function locationFunc(el)
+    {
+        const currentLoc=localStorage.shuttleLoc
+        console.log(currentLoc)
+        let x1 = currentLoc[1]
+        let x2 = currentLoc[2]
+        let x3 = currentLoc[3]
+        let xCoord = x1+x2+x3
+
+        let y1 = currentLoc[6]
+        let y2 = currentLoc[7]
+        let y3 = currentLoc[8]
+        let yCoord = y1+y2+y3
+
+
+        console.log(xCoord)
+        console.log(yCoord)
+
+        let minDist=99999
+        let node=0
+        let i =0
+        for(i=0;i<locs.length;i++)
+        {
+            let dist = Math.pow(((locs[i][0])-xCoord),2)+Math.pow(((locs[i][1])-yCoord),2)
+            if(dist<minDist)
+            {
+                node=i
+                minDist=dist
+            }
+            console.log(dist)
+        }
+        console.log(locs[node][2].valueOf())
+        el.classList.add(locs[node][2])
+    }
+
+    function userFunc(el)
+    {
+        el.classList.add(locs[2][2])
+    }
+//
+</script>
+
+
+</body>
+</html>
