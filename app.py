@@ -69,13 +69,13 @@ def process_data():
             while i < 4:
                 queue[i] = queue[i+1]
                 i = i+1
-            queue.append(n)
+            queue[i] = n
             dict = {}
             for fn in queue:
                 if fn in dict:
                     dict[fn]+=1
                 else:
-                    dict[fn] = 0
+                    dict[fn] = 1
             max = 0
             key = 0
             for k in dict.keys():
@@ -85,13 +85,12 @@ def process_data():
 
             if max >= 4 and key != 0:
                 counter[0] -= 1 
-                print("Count decrease")
+                output_value[0] = str(counter[0])
+                print("Count decrease -------------------------------------------------------------------------------------------")
                 queue = [0,0,0,0,0]
 
-            # Display the resulting frame
             cv2.imshow('frame', frame)
 
-            # This command let's us quit with the "q" button on a keyboard.
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
 
