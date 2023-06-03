@@ -32,6 +32,27 @@ $(document).ready(function() {
 
 
     });
+
+
+    $('#btn1').click(function() {
+        input = "personLocation";//$('#input-field').val();
+        $.ajax({
+            type: 'POST',
+            url: 'http://192.168.43.170:5000/process_data',
+            contentType: 'application/json',
+            data: JSON.stringify({input: input}),
+            success: function(data) {
+                $('#output-field').val(data.output);
+                localStorage.bus1Data = data.output
+            },
+            error: function(xhr, status, error) {
+                console.error(status + ': ' + error);
+            }
+        });
+
+
+
+    });
 });
 
 var uid
@@ -60,5 +81,10 @@ function loadFunc()
 function testfunc()
 {
     console.log("This works")
+
+}
+
+function mapFunction()
+{
 
 }

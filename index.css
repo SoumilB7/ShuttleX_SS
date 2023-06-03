@@ -86,7 +86,8 @@ body
     transform: translate(0, -11px) rotate(45deg);
 }
 
-.sidenav {
+.sidenav
+{
     height: 100%;
     width: 0;
     position: fixed;
@@ -100,7 +101,8 @@ body
     border-top-right-radius: 15px;
 }
 
-.sidenav a {
+.sidenav a
+{
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
@@ -109,11 +111,13 @@ body
     transition: 0.3s;
 }
 
-.sidenav a:hover {
+.sidenav a:hover
+{
     color: #f1f1f1;
 }
 
-.sidenav .closebtn {
+.sidenav .closebtn
+{
     position: absolute;
     top: 0;
     right: 25px;
@@ -121,7 +125,8 @@ body
     margin-left: 50px;
 }
 
-.icons{
+.icons
+{
     color: #D8DEE9;
     background-position-x: 1000px;
     background-position-y: 100px;
@@ -135,7 +140,7 @@ body
 {
     color: #D8DEE9;
     position: absolute ;
-    left: 10%;
+    left: 200px;
     top: -0.8%
   /*  left: 215px;
     top: -80px; */
@@ -145,7 +150,7 @@ body
 {
     color: #D8DEE9;
     position: absolute ;
-    left: 10%;
+    left: 200px;
     top: 2%;
   /*  left: 208px;
     top: -90px;*/
