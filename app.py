@@ -34,6 +34,7 @@ def index():
     # return "<h1>Hello, World</h1>"
     
 counter = [0,0,0,0,0]
+output_value=[0,0,0,0,0]
 
 @app.route('/process_data', methods=['POST'])
 def process_data():
@@ -95,36 +96,35 @@ def process_data():
                 break
 
     elif input_value=='personLocation':
-        output_value = str([random.randint(10,50)*10 ,random.randint(10,50)*10]) 
+        outputt = str([random.randint(10,50)*10 ,random.randint(10,50)*10]) 
+        return jsonify({'output': outputt})
     elif input_value =='counter1':
         counter[0]+=1
-        work = 'counter : ' 
-        output_value = work + str(counter[0])
+        output_value[0] = str(counter[0])
     elif input_value =='counter2':
         counter[1]+=1
-        work = 'counter : '
-        output_value = work + str(counter[1])
+        output_value[1] = str(counter[1])
     elif input_value =='counter3':
         counter[2]+=1
-        work = 'counter : '
         #a,b = rangeof(counter[2])
-        output_value = work + str(counter[2])
+        output_value[2] = str(counter[2])
     elif input_value =='counter4':
         counter[3]+=1
-        work = 'counter : '
         #a,b = rangeof(counter[3])
-        output_value = work + str(counter[3])
+        output_value[3] = str(counter[3])
     elif input_value =='counter5':
         counter[4]+=1
-        work = 'counter : '
         #a,b = rangeof(counter[4])
-        output_value = work + str(counter[4])
+        output_value[4] = str(counter[4])
+    elif input_value == 'reload':
+        return jsonify({'output': str(output_value[0])+','+str(output_value[1])+','+str(output_value[2])+','+str(output_value[3])+','+str(output_value[4])})
+        
                 
     # input_value format : 
     # member counte       
     
     #------------------------------------------------------------
-    return jsonify({'output': output_value})
+    return jsonify({'output': str(output_value[0])+','+str(output_value[1])+','+str(output_value[2])+','+str(output_value[3])+','+str(output_value[4])})
 
 if __name__ == '__main__':
     app.run(host = '192.168.43.170',port='5000',debug=True)
