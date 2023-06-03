@@ -119,14 +119,14 @@ body
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-}   
+}
 
 .icons{
     color: #D8DEE9;
     background-position-x: 1000px;
     background-position-y: 100px;
     position: relative ;
-    left: 300px; 
+    left: 300px;
     top: -30px;
     scale: 175%;
 }
@@ -134,17 +134,21 @@ body
 .accountName
 {
     color: #D8DEE9;
-    position: relative ;
-    left: 190px; 
-    top: -80px;
+    position: absolute ;
+    left: 10%;
+    top: -0.8%
+  /*  left: 215px;
+    top: -80px; */
 }
 
 .regNo
 {
     color: #D8DEE9;
-    position: relative ;
-    left: 190px; 
-    top: -90px;
-    font-size: 12px;
+    position: absolute ;
+    left: 10%;
+    top: 2%;
+  /*  left: 208px;
+    top: -90px;*/
+    font-size: 14px;
 
 }
