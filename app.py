@@ -99,28 +99,26 @@ def process_data():
     elif input_value =='counter1':
         counter[0]+=1
         work = 'counter : ' 
-        a,b = rangeof(counter[0])
-        output_value = work + str(a) + " - " + str(b)
+        output_value = work + str(counter[0])
     elif input_value =='counter2':
         counter[1]+=1
         work = 'counter : '
-        a,b = rangeof(counter[1])
-        output_value = work + str(a) + " - " + str(b)
+        output_value = work + str(counter[1])
     elif input_value =='counter3':
         counter[2]+=1
         work = 'counter : '
-        a,b = rangeof(counter[2])
-        output_value = work + str(a) + " - " + str(b)
+        #a,b = rangeof(counter[2])
+        output_value = work + str(counter[2])
     elif input_value =='counter4':
         counter[3]+=1
         work = 'counter : '
-        a,b = rangeof(counter[3])
-        output_value = work + str(a) + " - " + str(b)
+        #a,b = rangeof(counter[3])
+        output_value = work + str(counter[3])
     elif input_value =='counter5':
         counter[4]+=1
         work = 'counter : '
-        a,b = rangeof(counter[4])
-        output_value = work + str(a) + " - " + str(b)
+        #a,b = rangeof(counter[4])
+        output_value = work + str(counter[4])
                 
     # input_value format : 
     # member counte       
