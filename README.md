@@ -1,5 +1,5 @@
 # ShuttleX_SS
-shuttlup
+ShuttleX
 Our app will consist of three components:
 
 Autopayment: Passengers scans fingerprint upon boarding the shuttle. The system checks the fingerprint in the VIT database and deducts the amount from the VTOP wallet.
